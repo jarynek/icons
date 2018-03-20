@@ -1,0 +1,1 @@
+console.log('icons_package front');
