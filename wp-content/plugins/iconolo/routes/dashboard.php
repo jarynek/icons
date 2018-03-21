@@ -9,10 +9,12 @@
         border: 4px dashed #b4b9be;
         padding: 20px;
         text-align: center;
-        height: 160px;
+        height: 200px;
 	}
     .file-upload h2 {
         font-weight: 400;
     }
 </style>
-<?php include dirname(dirname(__FILE__)) . '/templates/admin/uploads_file_form.php';
+<?php
+print_r($_GET);
+include dirname(dirname(__FILE__)) . '/templates/admin/uploads_file_form.php';

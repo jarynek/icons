@@ -31,13 +31,19 @@ class Ajax {
                 return xhr;
             },
             beforeSend: () => {
-                console.log('beforeSend');
+                if(args.beforeSend && typeof args.beforeSend === 'function'){
+                    args.beforeSend(event);
+                }
             },
-            success: (response) => {
-                console.log('success');
+            success: (response, status, xhr) => {
+                if(args.success && typeof args.success === 'function'){
+                    args.success(response, status, xhr);
+                }
             },
             complete: () => {
-                console.log('complete');
+                if(args.complete && typeof args.complete === 'function'){
+                    args.complete();
+                }
             }
         })
     }

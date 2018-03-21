@@ -8,6 +8,7 @@ class InsertIcons {
     constructor() {
         Search.ajaxRenderResult();
         Form.dropUploadFiles();
+        Form.changeUploadFiles();
     }
 }
 

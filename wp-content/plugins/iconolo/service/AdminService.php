@@ -70,7 +70,6 @@ class AdminService {
 	 * source upload
 	 */
 	public function sourceUpload() {
-
 		$this->files->zipUpload( $this->request->file( 'file' ) );
 		$this->files->unpackZip();
 	}
